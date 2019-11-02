@@ -1,14 +1,10 @@
-<?php
-# Nexss PROGRAMMER 2.0.0 - PHP
-# Default template for JSON Data
-# STDIN
-$NexssStdin = fgets(STDIN);
-$parsedJson = json_decode($NexssStdin,true);
-
-# Modify Data
-# $parsedJson["phpOutput"] = "Hello from PHP! " . (string)phpversion() ;
-$parsedJson["test"] = "test";
-$NexssStdout = json_encode($parsedJson);
-
-# STDOUT
-fwrite(STDOUT, $NexssStdout);
+class Main {
+	public static function main() {
+		var lines = Sys.stdin().readAll().toString().split("\n");
+		// Then do something with them...
+		// lines.whatev(...);
+		for (line in lines) {
+			Sys.println("> " + line);
+		}
+	}
+}

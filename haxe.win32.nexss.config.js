@@ -2,7 +2,7 @@ let languageConfig = Object.assign({}, require("../config.win32"));
 languageConfig.title = "Haxe";
 languageConfig.description =
   "Haxe is an open source toolkit based on a modern, high level, strictly typed programming language, a cross-compiler, a complete cross-platform standard library and ways to access each platform's native capabilities.";
-languageConfig.url = "https://www.php.net/";
+languageConfig.url = "https://haxe.org/";
 languageConfig.extensions = [".hx"];
 languageConfig.builders = {};
 languageConfig.compilers = {
@@ -29,7 +29,7 @@ languageConfig.languagePackageManagers = {
     init: () => {},
     // if command not found in specification
     // run directly on package manager
-    else: "haxelib <default> <args>"
+    else: "haxelib"
   }
 };
 
