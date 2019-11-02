@@ -4,8 +4,7 @@ class Test {
 
 		for (line in lines) {
 			var o = haxe.Json.parse(line);
-			o.test = "test";
-			// o.helloFromHaxe = haxe.macro.Compiler.getDefine("haxe_ver");
+			o.helloFromHaxe = haxe.macro.Compiler.getDefine("haxe_ver");
 
 			var s = haxe.Json.stringify(o);
 			Sys.println(s);

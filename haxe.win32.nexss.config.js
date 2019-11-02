@@ -10,7 +10,7 @@ languageConfig.compilers = {
     install: "scoop install haxe",
     // Cpp does not have possibility to compile and run on the fly. We need to save it as a exe file first.
     command: "haxe",
-    args: "<file>",
+    args: "-main <file> --interp",
     help: ``
   }
 };
@@ -18,8 +18,7 @@ languageConfig.errors = require("./nexss.haxe.errors");
 languageConfig.languagePackageManagers = {
   haxelib: {
     installation: "scoop install haxe",
-    messageAfterInstallation:
-      "Add to the top of your php file(s): require __DIR__ . '/vendor/autoload.php';", //this message will be displayed after this package manager installation, maybe some action needed etc.
+    messageAfterInstallation: "",
     installed: "haxelib installed",
     search: "haxelib search",
     install: "haxelib require",
