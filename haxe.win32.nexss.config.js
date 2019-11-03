@@ -6,9 +6,8 @@ languageConfig.url = "https://haxe.org/";
 languageConfig.extensions = [".hx"];
 languageConfig.builders = {};
 languageConfig.compilers = {
-  php7: {
+  haxe: {
     install: "scoop install haxe",
-    // Cpp does not have possibility to compile and run on the fly. We need to save it as a exe file first.
     command: "haxe",
     args: "-main <file> --interp",
     help: ``
@@ -26,8 +25,6 @@ languageConfig.languagePackageManagers = {
     help: "haxelib",
     version: "haxelib version",
     init: () => {},
-    // if command not found in specification
-    // run directly on package manager
     else: "haxelib"
   }
 };
