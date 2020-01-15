@@ -1,4 +1,4 @@
-class Test {
+class HelloWorld {
 	static function main() {
 		var lines = Sys.stdin().readAll().toString().split("\n");
 
