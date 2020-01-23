@@ -9,7 +9,8 @@ languageConfig.compilers = {
   haxe: {
     install: "scoop install haxe",
     command: "haxe",
-    args: "-main <file> --interp",
+    // args: "-main <file> --interp",
+    args: "--run <fileNoExt>",
     help: ``
   }
 };
