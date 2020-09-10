@@ -1,4 +1,8 @@
-let languageConfig = Object.assign({}, require("../config.win32"));
+let languageConfig = Object.assign(
+  {},
+  require(`../config.${process.platform}`)
+);
+
 languageConfig.title = "Haxe";
 languageConfig.description =
   "Haxe is an open source toolkit based on a modern, high level, strictly typed programming language, a cross-compiler, a complete cross-platform standard library and ways to access each platform's native capabilities.";
@@ -14,8 +18,8 @@ languageConfig.compilers = {
     command: "haxe",
     // args: "-main <file> --interp",
     args: "--run <fileNoExt>",
-    help: ``
-  }
+    help: ``,
+  },
 };
 languageConfig.errors = require("./nexss.haxe.errors");
 languageConfig.languagePackageManagers = {
@@ -29,8 +33,8 @@ languageConfig.languagePackageManagers = {
     help: "haxelib",
     version: "haxelib version",
     init: () => {},
-    else: "haxelib"
-  }
+    else: "haxelib",
+  },
 };
 
 module.exports = languageConfig;
